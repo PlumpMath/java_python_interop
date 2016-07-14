@@ -6,10 +6,10 @@ Java-Python Interop
 2. Start Pyro4 name server
 ```$pyro4-ns```
 You should get something like this
-`Not starting broadcast server for localhost.
+```Not starting broadcast server for localhost.
 NS running on localhost:9090 (127.0.0.1)
 Warning: HMAC key not set. Anyone can connect to this server!
-URI = PYRO:Pyro.NameServer@localhost:9090`
+URI = PYRO:Pyro.NameServer@localhost:9090```
 3. Write some Python code to perform remote invocations on using Pyro4.
 ```python
 import Pyro4

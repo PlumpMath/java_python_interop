@@ -2,15 +2,24 @@ Java-Python Interop
 ===================
 
 1. Install Pyro4
-```$pip install pyro4```
+```
+$pip install pyro4
+```
 2. Start Pyro4 name server
-```$pyro4-ns```
+```
+$pyro4-ns
+```
 You should get something like this
-```Not starting broadcast server for localhost.
+
+```
+Not starting broadcast server for localhost.
 NS running on localhost:9090 (127.0.0.1)
 Warning: HMAC key not set. Anyone can connect to this server!
-URI = PYRO:Pyro.NameServer@localhost:9090```
+URI = PYRO:Pyro.NameServer@localhost:9090
+```
+
 3. Write some Python code to perform remote invocations on using Pyro4.
+
 ```python
 import Pyro4
 
@@ -28,11 +37,20 @@ ns.register("example.greeting", uri)   # register the object with a name in the 
 print("Ready.")
 daemon.requestLoop()                   # start the event loop of the server to wait for calls
 ```
+
 4. Execute the above code
-```python greeting_server.py```
+
+```
+python greeting_server.py
+```
+
 You should get the message
-```Ready.```
+```
+Ready.
+```
+
 5. Write some Java code to use Pyro. Note that this project contains a Maven pom.xml in order to include Pyro dependencies and build an uber-jar with these dependencies.
+
 ```java
 import net.razorvine.pyro.*;
 
@@ -46,10 +64,22 @@ public class HelloPython {
 		System.out.println(result);
 	}
 }```
+
 6. Build the Java code
-```mvn clean package```
+
+```
+mvn clean package
+```
+
 7. Test the Java code
-```mvn test```
+
+```
+mvn test
+```
+
 This will run the main method. You should see the following on the console
-```Hello, Marek. Here is your fortune message:
-Tomorrow's lucky number is 12345678.```
+
+```
+Hello, Marek. Here is your fortune message:
+Tomorrow's lucky number is 12345678.
+```

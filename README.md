@@ -64,7 +64,8 @@ public class HelloPython {
 		final String result = (String) remoteobject.call("get_fortune", "Marek");
 		System.out.println(result);
 	}
-}```
+}
+```
 
 6. Build the Java code
 

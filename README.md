@@ -1,12 +1,12 @@
 Java-Python Interop
 ===================
 
-1. Install Pyro4
+Install Pyro4
 ```
 $pip install pyro4
 ```
 
-2. Start Pyro4 name server
+Start Pyro4 name server
 ```
 $pyro4-ns
 ```
@@ -19,7 +19,7 @@ Warning: HMAC key not set. Anyone can connect to this server!
 URI = PYRO:Pyro.NameServer@localhost:9090
 ```
 
-3. Write some Python code to perform remote invocations on using Pyro4.
+Write some Python code to perform remote invocations on using Pyro4.
 
 ```python
 import Pyro4
@@ -39,7 +39,7 @@ print("Ready.")
 daemon.requestLoop()                   # start the event loop of the server to wait for calls
 ```
 
-4. Execute the above code
+Execute the above code
 
 ```
 python greeting_server.py
@@ -50,7 +50,7 @@ You should get the message
 Ready.
 ```
 
-5. Write some Java code to use Pyro. Note that this project contains a Maven pom.xml in order to include Pyro dependencies and build an uber-jar with these dependencies.
+Write some Java code to use Pyro. Note that this project contains a Maven pom.xml in order to include Pyro dependencies and build an uber-jar with these dependencies.
 
 ```java
 import net.razorvine.pyro.*;
@@ -67,13 +67,13 @@ public class HelloPython {
 }
 ```
 
-6. Build the Java code
+Build the Java code
 
 ```
 mvn clean package
 ```
 
-7. Test the Java code
+Test the Java code
 
 ```
 mvn test

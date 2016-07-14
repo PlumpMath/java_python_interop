@@ -73,7 +73,7 @@ Build the Java code
 mvn clean package
 ```
 
-Test the Java code
+Test the Java code (after setting up Pyro, starting the name server and the Python server app).
 
 ```
 mvn test

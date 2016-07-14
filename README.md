@@ -1,12 +1,12 @@
 Java-Python Interop
 ===================
 
-Install Pyro4
+Install Pyro
 ```
 $pip install pyro4
 ```
 
-Start Pyro4 name server
+Start Pyro name server
 ```
 $pyro4-ns
 ```
@@ -19,7 +19,7 @@ Warning: HMAC key not set. Anyone can connect to this server!
 URI = PYRO:Pyro.NameServer@localhost:9090
 ```
 
-Write some Python code to perform remote invocations on using Pyro4.
+Write some Python code to perform remote invocations on using Pyro.
 
 ```python
 import Pyro4
@@ -85,3 +85,5 @@ This will run the main method. You should see the following on the console
 Hello, Marek. Here is your fortune message:
 Tomorrow's lucky number is 12345678.
 ```
+
+For more information about Pyro, see [here](https://pythonhosted.org/Pyro4/intro.html). For more information about Pyro in Java, see [here](https://pythonhosted.org/Pyro4/pyrolite.html).
